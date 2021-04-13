@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagementstudio.HistoryController">
+   <children>
+      <VBox prefHeight="750.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" prefHeight="170.0" prefWidth="1250.0" styleClass="menubodybg" stylesheets="@style.css">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="644.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="102.0" prefWidth="518.0" text="MediCARE" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="69.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <Bloom />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="653.0" layoutY="10.0" prefHeight="100.0" prefWidth="659.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="authenticationLabel" text="ADMIN" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="40.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="430.0" prefWidth="938.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox maxWidth="250.0" prefHeight="495.0" prefWidth="118.0" style="-fx-background-color: #3d8ff7;" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <JFXButton fx:id="homeBtn" alignment="TOP_LEFT" onAction="#homeButtonClicked" prefHeight="60.0" prefWidth="481.0" text="Home" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/homepage.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="searchBtn" alignment="TOP_LEFT" onAction="#searchButtonClicked" prefHeight="60.0" prefWidth="481.0" text="Search" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="addNewBtn" alignment="TOP_LEFT" onAction="#addNewButtonClicked" prefHeight="60.0" prefWidth="280.0" text="Add New" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="sellProductBtn" alignment="TOP_LEFT" onAction="#sellProductsButtonClicked" prefHeight="60.0" prefWidth="272.0" text="Sell Products" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sale.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="historyBtn" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="272.0" style="-fx-background-color: red;" text="History" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/record.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="editRecordBtn" alignment="TOP_LEFT" onAction="#editRecordButtonClicked" prefHeight="60.0" prefWidth="294.0" text="Edit Records" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/input.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="profileBtn" alignment="TOP_LEFT" onAction="#profileButtonClicked" prefHeight="60.0" prefWidth="270.0" text="My Profile" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/profile.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="logOutBtn" alignment="TOP_LEFT" onAction="#logoutButtonClicked" prefHeight="60.0" prefWidth="270.0" text="Log Out" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/exit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="aboutBtn" alignment="TOP_LEFT" onAction="#aboutButtonClicked" prefHeight="60.0" prefWidth="270.0" text="About" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/question.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="495.0" prefWidth="580.0" spacing="50.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                     <children>
+                        <HBox spacing="10.0" style="-fx-background-color: #FF5252;">
+                           <children>
+                              <VBox alignment="CENTER" style="-fx-background-color: #FF5252;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TextField fx:id="searchBar" prefHeight="26.0" prefWidth="986.0" promptText="Search here" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <InnerShadow />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="72.0" spacing="10.0" style="-fx-background-color: #FF5252;" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <JFXComboBox fx:id="searchBy" focusColor="#3d8ff7" maxWidth="1.7976931348623157E308" prefHeight="39.0" promptText="Seach By" styleClass="comboboxfontSearch" stylesheets="@style.css" unFocusColor="WHITE" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="1.0" top="1.0" />
+                                             </HBox.margin>
+                                          </JFXComboBox>
+                                          <JFXButton onAction="#clearFilterClicked" prefHeight="39.0" prefWidth="197.0" style="-fx-background-color: #3CB371;" text="Clear Filter" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER">
+                                 <children>
+                                    <JFXButton fx:id="searchBtn1" alignment="CENTER" buttonType="RAISED" defaultButton="true" onAction="#searchClicked" prefHeight="44.0" prefWidth="58.0" style="-fx-background-color: #3D8FF7;" text="." textFill="#3d8ff7">
+                                       <effect>
+                                          <DropShadow spread="0.22" />
+                                       </effect>
+                                       <graphic>
+                                          <ImageView fitHeight="45.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/magnifying-glass.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font size="1.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="clearHistoryBtn" alignment="CENTER" buttonType="RAISED" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" onAction="#clearButtonClicked" prefHeight="75.0" prefWidth="58.0" style="-fx-background-color: #ffc428;" text="." textFill="#ffbf1c" VBox.vgrow="ALWAYS">
+                                       <effect>
+                                          <DropShadow spread="0.22" />
+                                       </effect>
+                                       <graphic>
+                                          <ImageView fitHeight="45.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/delete.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font size="1.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets left="200.0" right="200.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="542.0" prefWidth="814.0">
+                           <children>
+                              <TableView id="schedule" fx:id="history" accessibleRole="TEXT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" stylesheets="@table.css" VBox.vgrow="ALWAYS">
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <VBox.margin>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" />
+                                 </VBox.margin>
+                                 <columns>
+                                    <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Time" />
+                                    <TableColumn fx:id="medicineIdColumn" prefWidth="75.0" text="Medicine ID" />
+                                    <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Medicine Name" />
+                                    <TableColumn fx:id="batchColumn" prefWidth="75.0" text="Batch" />
+                                    <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
+                                    <TableColumn fx:id="totalCostColumn" prefWidth="75.0" text="Total Cost" />
+                                    <TableColumn fx:id="sellerIdColumn" prefWidth="75.0" text="Sold By" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

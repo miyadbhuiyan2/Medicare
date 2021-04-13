@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="profileAnchorPane" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagementstudio.ProfileController">
+   <children>
+      <VBox prefHeight="750.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" prefHeight="169.1" prefWidth="1250.0" styleClass="menubodybg" stylesheets="@style.css">
+               <children>
+                  <HBox prefHeight="178.0" prefWidth="1500.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="644.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="102.0" prefWidth="518.0" text="MediCARE" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="69.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <Bloom />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="653.0" layoutY="10.0" prefHeight="100.0" prefWidth="659.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="authenticationLabel" text="ADMIN" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="40.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="2.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="430.0" prefWidth="938.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox maxWidth="250.0" prefHeight="495.0" prefWidth="250.4" style="-fx-background-color: #3d8ff7;" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <JFXButton fx:id="homeBtn" alignment="TOP_LEFT" onAction="#homeButtonClicked" prefHeight="60.0" prefWidth="481.0" text="Home" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/homepage.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="searchBtn" alignment="TOP_LEFT" onAction="#searchButtonClicked" prefHeight="60.0" prefWidth="481.0" text="Search" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="addNewBtn" alignment="TOP_LEFT" onAction="#addNewButtonClicked" prefHeight="60.0" prefWidth="280.0" text="Add New" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="sellProductsBtn" alignment="TOP_LEFT" onAction="#sellProductsButtonClicked" prefHeight="60.0" prefWidth="272.0" text="Sell Products" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sale.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="historyBtn" alignment="TOP_LEFT" onAction="#historyButtonClicked" prefHeight="60.0" prefWidth="272.0" text="History" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/record.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="editRecordsBtn" alignment="TOP_LEFT" onAction="#editRecordButtonClicked" prefHeight="60.0" prefWidth="294.0" text="Edit Records" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/input.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="profileBtn" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="270.0" style="-fx-background-color: red;" text="My Profile" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/profile.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="logOutBtn" alignment="TOP_LEFT" onAction="#logoutButtonClicked" prefHeight="60.0" prefWidth="270.0" text="Log Out" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/exit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="aboutBtn" alignment="TOP_LEFT" onAction="#aboutButtonClicked" prefHeight="60.0" prefWidth="270.0" text="About" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/question.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="495.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox alignment="CENTER" prefWidth="1250.0" spacing="24.0">
+                                 <children>
+                                    <HBox alignment="TOP_CENTER" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="376.0" text="User ID" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text=":">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="userID" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="328.53668785095215">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="376.0" text="Name" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text=":">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="name" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="328.53668785095215">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="376.0" text="Contact Number" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text=":">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="contactNumber" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="328.53668785095215">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="376.0" text="Address" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text=":">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="address" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="328.53668785095215">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="376.0" text="Old Password" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text=":">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXPasswordField fx:id="oldpassword" prefHeight="26.0" prefWidth="334.0">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </JFXPasswordField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="376.0" text="New Password" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text=":">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXPasswordField fx:id="newpassword" prefHeight="26.0" prefWidth="334.0">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </JFXPasswordField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="47.0" prefWidth="376.0" text="Confirm New Password" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text=":">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXPasswordField fx:id="confirmPassword" prefHeight="26.0" prefWidth="334.0">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </JFXPasswordField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_CENTER" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="46.0" prefWidth="248.0" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label>
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="changePasswordBtn" onAction="#changePasswordButtonClicked" prefHeight="31.0" prefWidth="205.0" style="-fx-background-color: green;" text="Change Password" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="40.0" right="40.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

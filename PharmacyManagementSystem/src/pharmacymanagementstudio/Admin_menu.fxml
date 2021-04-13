@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagementstudio.Admin_menuController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" prefHeight="170.0" prefWidth="1250.0" styleClass="menubodybg" stylesheets="@style.css">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="644.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="102.0" prefWidth="518.0" text="MediCARE" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="69.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <Bloom />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="653.0" layoutY="10.0" prefHeight="100.0" prefWidth="659.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="authenticationLabel" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="40.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="430.0" prefWidth="938.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox maxWidth="250.0" prefHeight="495.0" prefWidth="118.0" style="-fx-background-color: #3d8ff7;" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <JFXButton fx:id="homeBtn" alignment="TOP_LEFT" prefHeight="60.0" prefWidth="481.0" style="-fx-background-color: red;" text="Home" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/homepage.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="searchBtn" alignment="TOP_LEFT" onAction="#searchButtonClicked" prefHeight="60.0" prefWidth="481.0" text="Search" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="addNewBtn" alignment="TOP_LEFT" onAction="#addNewButtonClicked" prefHeight="60.0" prefWidth="280.0" text="Add New" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/add.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="sellProductBtn" alignment="TOP_LEFT" onAction="#sellProductsButtonClicked" prefHeight="60.0" prefWidth="272.0" text="Sell Products" textFill="#f8f5f5" VBox.vgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sale.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="historyBtn" alignment="TOP_LEFT" onAction="#historyButtonClicked" prefHeight="60.0" prefWidth="272.0" text="History" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/record.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="editRecordBtn" alignment="TOP_LEFT" onAction="#editRecordButtonClicked" prefHeight="60.0" prefWidth="294.0" text="Edit Records" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/input.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="profileBtn" alignment="TOP_LEFT" onAction="#profileButtonClicked" prefHeight="60.0" prefWidth="270.0" text="My Profile" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/profile.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="logOutBtn" alignment="TOP_LEFT" onAction="#logoutButtonClicked" prefHeight="60.0" prefWidth="270.0" text="Log Out" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/exit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton fx:id="aboutBtn" alignment="TOP_LEFT" onAction="#aboutButtonClicked" prefHeight="60.0" prefWidth="270.0" text="About" textFill="#f8f5f5">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/question.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="495.0" prefWidth="580.0" spacing="50.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="230.0" prefWidth="945.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="230.0" prefWidth="361.0" styleClass="medicineNumberbodybg" stylesheets="@style.css">
+                                 <children>
+                                    <VBox prefHeight="94.0" prefWidth="274.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="totalMedicine" alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="274.0" text="0" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="50.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="46.0" prefWidth="328.0" text="Total Medicines" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <effect>
+                                          <DropShadow height="56.74" radius="20.72" spread="0.7" width="28.14" />
+                                       </effect>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="BOTTOM_CENTER" prefHeight="85.0" prefWidth="276.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton fx:id="totalMedicineBtn" alignment="CENTER" onAction="#totalmedicineButtonClicked" opacity="0.8" prefHeight="44.0" prefWidth="614.0" style="-fx-background-color: #545454;" text="DETAILS" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="230.0" prefWidth="361.0" styleClass="expiryMedicinesbodybg" stylesheets="@style.css">
+                                 <children>
+                                    <VBox prefHeight="94.0" prefWidth="274.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="expiredMedicine" alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="274.0" text="0" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="50.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="46.0" prefWidth="328.0" text="Expired Medicines" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <effect>
+                                          <DropShadow height="56.74" radius="20.72" spread="0.7" width="28.14" />
+                                       </effect>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="BOTTOM_CENTER" prefHeight="85.0" prefWidth="276.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton fx:id="expireMedicineBtn" alignment="CENTER" onAction="#expiremedicinesButtonClicked" opacity="0.8" prefHeight="44.0" prefWidth="614.0" style="-fx-background-color: #545454;" text="DETAILS" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="230.0" prefWidth="361.0" styleClass="outOfStockbodybg" stylesheets="@style.css">
+                                 <children>
+                                    <VBox prefHeight="94.0" prefWidth="274.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="outOfStock" alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="274.0" text="0" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="50.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="46.0" prefWidth="328.0" text="Out of Stock" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <effect>
+                                          <DropShadow height="56.74" radius="20.72" spread="0.7" width="28.14" />
+                                       </effect>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="BOTTOM_CENTER" prefHeight="85.0" prefWidth="276.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton fx:id="outOfStockBtn" alignment="CENTER" onAction="#outofstockNewButtonClicked" opacity="0.8" prefHeight="44.0" prefWidth="614.0" style="-fx-background-color: #545454;" text="DETAILS" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="230.0" prefWidth="945.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="230.0" prefWidth="361.0" styleClass="preOrderbodybg" stylesheets="@style.css">
+                                 <children>
+                                    <VBox prefHeight="94.0" prefWidth="274.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="preOrder" alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="274.0" text="0" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="50.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="46.0" prefWidth="328.0" text="Pre-Order" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <effect>
+                                          <DropShadow height="56.74" radius="20.72" spread="0.7" width="28.14" />
+                                       </effect>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="BOTTOM_CENTER" prefHeight="85.0" prefWidth="276.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton fx:id="preOrderBtn" alignment="CENTER" onAction="#preorderProductsButtonClicked" opacity="0.8" prefHeight="44.0" prefWidth="614.0" style="-fx-background-color: #545454;" text="DETAILS" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="230.0" prefWidth="361.0" styleClass="schedulebodybg" stylesheets="@style.css">
+                                 <children>
+                                    <VBox prefHeight="94.0" prefWidth="274.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="schedule" alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="274.0" text="0" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="50.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="46.0" prefWidth="328.0" text="Schedule" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <effect>
+                                          <DropShadow height="56.74" radius="20.72" spread="0.7" width="28.14" />
+                                       </effect>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </VBox>
+                                    <VBox alignment="BOTTOM_CENTER" prefHeight="85.0" prefWidth="276.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton fx:id="scheduleBtn" alignment="CENTER" onAction="#scheduleButtonClicked" opacity="0.8" prefHeight="44.0" prefWidth="614.0" style="-fx-background-color: #545454;" text="DETAILS" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="230.0" prefWidth="361.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

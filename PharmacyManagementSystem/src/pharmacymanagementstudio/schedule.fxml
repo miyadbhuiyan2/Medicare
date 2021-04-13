@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagementstudio.ScheduleController">
+   <children>
+      <VBox layoutX="20.0" layoutY="20.0" prefHeight="770.4" prefWidth="1520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" prefHeight="170.0" prefWidth="1250.0" styleClass="menubodybg" stylesheets="@style.css">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="644.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="102.0" prefWidth="518.0" text="MediCARE" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="69.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <effect>
+                                    <Bloom />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="653.0" layoutY="10.0" prefHeight="100.0" prefWidth="659.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Schedule" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="40.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="475.0" prefWidth="814.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <TableView id="schedule" fx:id="scheduleTable" accessibleRole="TEXT" editable="true" prefHeight="200.0" prefWidth="200.0" stylesheets="@table.css" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="scheduleId" prefWidth="75.0" text="Schedule ID" />
+                      <TableColumn fx:id="date" minWidth="0.0" prefWidth="131.19998168945312" text="Date" />
+                        <TableColumn fx:id="customerId" prefWidth="75.0" text="Customer ID" />
+                        <TableColumn fx:id="medicineId" prefWidth="75.0" text="Medicine ID" />
+                        <TableColumn fx:id="medicineName" prefWidth="220.0" text="Medicine Name" />
+                        <TableColumn fx:id="quantity" prefWidth="75.0" text="Quantity" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets bottom="50.0" left="80.0" right="80.0" top="50.0" />
+                     </VBox.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TableView>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <JFXButton fx:id="backBtn" buttonType="RAISED" onAction="#backButtonClicked" prefHeight="46.0" prefWidth="290.0" style="-fx-background-color: #00A8F3;" text="BACK" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

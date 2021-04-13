@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacymanagementstudio.FXMLDocumentController">
+   <center>
+      <HBox nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #95DEED;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="546.0" prefWidth="538.0" styleClass="bodybg" stylesheets="@style.css" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="566.0" prefWidth="458.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" maxHeight="700.0" maxWidth="650.0" prefHeight="546.0" prefWidth="345.0" style="-fx-background-color: #FF0000;">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label alignment="TOP_CENTER" contentDisplay="CENTER" lineSpacing="1.0" text="SIGN IN" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="40.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="70.0" left="2.0" right="2.0" top="35.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="280.0" prefWidth="294.0" spacing="30.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="334.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fitHeight="59.0" fitWidth="55.0" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                                       <image>
+                                          <Image url="@../images/user.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <JFXTextField fx:id="userId" focusColor="#3d8ff7" prefHeight="54.0" prefWidth="303.0" promptText="Enter User ID" styleClass="text-field" stylesheets="@style.css" unFocusColor="WHITE" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="334.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fitHeight="59.0" fitWidth="55.0" pickOnBounds="true" HBox.hgrow="ALWAYS">
+                                       <image>
+                                          <Image url="@../images/lock.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <JFXPasswordField fx:id="password" focusColor="#3d8ff7" prefHeight="54.0" prefWidth="316.0" promptText="Enter Password" styleClass="text-field" stylesheets="@style.css" unFocusColor="WHITE" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </JFXPasswordField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <JFXCheckBox fx:id="signAsAdmin" alignment="CENTER" checkedColor="#3d8ff7" prefHeight="18.0" prefWidth="681.0" text="Sign in as owner" textFill="WHITE" unCheckedColor="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXCheckBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="message" alignment="CENTER" prefHeight="85.0" prefWidth="259.0" textFill="#fff703" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <JFXButton fx:id="signInBtn" alignment="CENTER" buttonType="RAISED" defaultButton="true" onAction="#signInButtonClicked" prefHeight="60.0" prefWidth="278.0" style="-fx-background-color: #3d8ff7;" text="Sign In" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets top="60.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="35.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" right="80.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <AnchorPane prefHeight="38.0" prefWidth="600.0" style="-fx-background-color: #95DEED;" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <AnchorPane prefHeight="362.0" prefWidth="35.0" style="-fx-background-color: #95DEED;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="26.0" prefWidth="600.0" style="-fx-background-color: #95DEED;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="336.0" prefWidth="41.0" style="-fx-background-color: #95DEED;" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

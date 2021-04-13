@@ -1,0 +1,100 @@
+.bodybg{
+    -fx-background-image:url("/images/signin.jpg") ;
+    -fx-background-size: 100% 100%;
+}
+.text-field {
+    -fx-prompt-text-fill: #ffffff;
+    -fx-text-fill: #ffffff;
+   
+}
+.menubodybg{
+    -fx-background-image:url("/images/red-blue.png") ;
+    -fx-background-size: 100% 100%;
+}
+.menuOptionButtonColor{
+    -fx-background-color:#0000ff;
+}
+.medicineNumberbodybg{
+    -fx-background-image:url("/images/totalmedicine.png") ;
+    -fx-background-size: 100% 100%;
+}
+.expiryMedicinesbodybg{
+    -fx-background-image:url("/images/expirymedicines.png") ;
+    -fx-background-size: 100% 100%;
+}
+.outOfStockbodybg{
+    -fx-background-image:url("/images/outofstock.png") ;
+    -fx-background-size: 100% 100%;
+}
+.preOrderbodybg{
+    -fx-background-image:url("/images/preorderbackground.png") ;
+    -fx-background-size: 100% 100%;
+}
+.schedulebodybg{
+    -fx-background-image:url("/images/schedule.png") ;
+    -fx-background-size: 100% 100%;
+}
+.choiceboxfont{
+    -fx-font-size: 25px;
+}
+.comboboxfont{
+    -fx-font-size: 25px;
+}
+.comboboxfont .input-line {
+    -fx-background-color: #03039a;
+}
+.comboboxfont .input-focused-line {
+    -fx-background-color: red;
+}
+.comboboxfontSearch{
+    -fx-font-size: 18px;
+     -fx-prompt-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+.comboboxfontSearch .arrow{
+-fx-mark-color: white ;
+}
+.comboboxfontSearch .list-cell
+ {
+    -fx-font-size: 18px;
+    -fx-text-fill: white; 
+    -fx-background-color: transparent;
+ }
+ .comboboxfontSearch .list-cell:hover
+ {
+    -fx-font-size: 18px;
+    -fx-text-fill: white; 
+    -fx-background-color:  #FF5252;
+ }
+ .comboboxfontSearch .list-view
+ {
+-fx-background-color: #3d8ff7;
+
+ }
+.comboboxfontSearch .input-line {
+    -fx-background-color: #ffffff;
+}
+.comboboxfontSearch .input-focused-line {
+    -fx-background-color: #3d8ff7;
+}
+.jfx-date-picker{
+     -fx-font-size: 25px;
+     
+}
+.jfx-date-picker .text-field{
+     -fx-prompt-text-fill: #000000;
+    -fx-text-fill: #000000;
+     
+}
+.jfx-date-picker .input-line {
+    -fx-background-color: #03039a;
+    
+}
+.jfx-date-picker .input-focused-line {
+    -fx-background-color: red;
+    
+}
+.textFlow{
+    -fx-font-size: 18px;
+    -fx-text-fill: #393838; 
+}
